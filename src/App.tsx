@@ -10,15 +10,15 @@ function App() {
   //本文を保持するstate
   const [mainText, setMainText] = useState<string>("");
   return (
-    <>
+    <div className="home-page">
+      <NoteList title={title} mainText={mainText} />
       <Note
         title={title}
         setTitle={setTitle}
         mainText={mainText}
         setMainText={setMainText}
       />
-      <NoteList title={title} mainText={mainText} />
-    </>
+    </div>
   );
 }
 
