@@ -27,6 +27,14 @@ const Note = ({
   };
 
   useEffect(() => {
+    if (localStorage.getItem("note")) {
+      const prevNote = localStorage.getItem("note");
+      const parseNote = prevNote ? JSON.parse(prevNote) : [];
+      console.log(parseNote);
+    }
+  }, []);
+
+  useEffect(() => {
     getDateTime();
     localStorage.setItem("note", JSON.stringify(note));
   }, [title]);
