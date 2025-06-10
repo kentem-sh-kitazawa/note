@@ -34,6 +34,7 @@ const NoteList = ({ title, setTitle, mainText, setMainText }: Props) => {
     const parseNotes = prevNotes ? JSON.parse(prevNotes) : [];
     const updateNotes = [...parseNotes, note];
     localStorage.setItem("notes", JSON.stringify(updateNotes));
+    setPrevNote(updateNotes);
     setTitle("新しいノート");
     setMainText("");
   };
