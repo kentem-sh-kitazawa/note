@@ -47,6 +47,25 @@ const NoteList = ({ title, setTitle, mainText, setMainText }: Props) => {
         <p>{mainText}</p>
         <p>日時</p>
       </li>
+      {prevNote.map((note, index) => (
+        <li key={index}>
+          <h3>{note.title}</h3>
+          <button
+            onClick={() => {
+              setPrevNote((prev) => {
+                const prevNotes = [...prev];
+                prevNotes.splice(index, 1);
+                localStorage.setItem("notes", JSON.stringify(prevNotes));
+                return prevNotes;
+              });
+            }}
+          >
+            削除
+          </button>
+          <p>{note.mainText}</p>
+          <p>日時</p>
+        </li>
+      ))}
     </div>
   );
 };
