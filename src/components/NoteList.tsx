@@ -8,7 +8,17 @@ type Props = {
 };
 
 const NoteList = ({ title, setTitle, mainText, setMainText }: Props) => {
-  //stateが変更されるとリストの表示も変わる、年月日と時間の表示
+  //年月日と時間の表示
+
+  //ローカルストレージに保存したノートを保持するステート
+  const [prevNote, setPrevNote] = useState<NoteType[]>([]);
+
+  //画面を表示したときにローカルストレージに保存したノートを描画する処理
+  useEffect(() => {
+    const prevNotes = localStorage.getItem("notes");
+    const parseNotes = prevNotes ? JSON.parse(prevNotes) : [];
+    setPrevNote(parseNotes);
+  }, []);
 
   const addNote = () => {
     const note = {
