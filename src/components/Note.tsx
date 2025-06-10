@@ -1,6 +1,7 @@
 import { useEffect, type Dispatch, type SetStateAction } from "react";
 
 import type { NoteType } from "../Type/NoteType";
+import "../style/Note.css";
 
 type Props = {
   title: string;
