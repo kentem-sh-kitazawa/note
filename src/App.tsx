@@ -1,5 +1,11 @@
+import Note from "./components/Note";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Note />
+    </>
+  );
 }
 
 export default App;
