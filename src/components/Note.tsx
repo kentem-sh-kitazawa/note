@@ -13,11 +13,11 @@ const Note = ({ title, setTitle, mainText, setMainText }: Props) => {
   const note: NoteType = { title: title, mainText: mainText };
 
   useEffect(() => {
-    localStorage.setItem("notes", JSON.stringify(note));
+    localStorage.setItem("note", JSON.stringify(note));
   }, [title]);
 
   useEffect(() => {
-    localStorage.setItem("notes", JSON.stringify(note));
+    localStorage.setItem("note", JSON.stringify(note));
   }, [mainText]);
 
   return (
