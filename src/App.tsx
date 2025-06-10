@@ -3,7 +3,14 @@ import { useState } from "react";
 import Note from "./components/Note";
 import NoteList from "./components/NoteList";
 import "./style/App.css";
+//stateの初期値
+//日時順？
+//編集機能
 
+//スタイル
+//↑スクロールバー
+
+//マークダウン
 function App() {
   //タイトルを保持するstate
   const [title, setTitle] = useState<string>("新しいノート");
