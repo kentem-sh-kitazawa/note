@@ -8,7 +8,14 @@ type Props = {
   setMainText: Dispatch<SetStateAction<string>>;
 };
 
-const NoteList = ({ title, setTitle, mainText, setMainText }: Props) => {
+const NoteList = ({
+  title,
+  setTitle,
+  mainText,
+  setMainText,
+  dateTime,
+  getDateTime,
+}: Props) => {
   //年月日と時間の表示
 
   //ローカルストレージに保存したノートを保持するステート
