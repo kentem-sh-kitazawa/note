@@ -9,7 +9,6 @@ type Props = {
 
 const NoteList = ({ title, setTitle, mainText, setMainText }: Props) => {
   //stateが変更されるとリストの表示も変わる、年月日と時間の表示
-  //追加を押したときに新しく作成、stateをリセット
   return (
     <div>
       <li>
