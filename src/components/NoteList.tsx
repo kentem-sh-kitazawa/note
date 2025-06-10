@@ -1,15 +1,11 @@
 import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
+import type { NoteType } from "../Type/NoteType";
 
 type Props = {
   title: string;
   setTitle: Dispatch<SetStateAction<string>>;
   mainText: string;
   setMainText: Dispatch<SetStateAction<string>>;
-};
-
-type NoteType = {
-  title: string;
-  mainText: string;
 };
 
 const NoteList = ({ title, setTitle, mainText, setMainText }: Props) => {
@@ -42,7 +38,6 @@ const NoteList = ({ title, setTitle, mainText, setMainText }: Props) => {
   return (
     <div>
       <button onClick={() => addNote()}>追加</button>
-
       <li>
         <h3>{title}</h3>
         <button
