@@ -7,10 +7,23 @@ type Props = {
   setTitle: Dispatch<SetStateAction<string>>;
   mainText: string;
   setMainText: Dispatch<SetStateAction<string>>;
+  dateTime: string;
+  getDateTime: () => void;
 };
 
-const Note = ({ title, setTitle, mainText, setMainText }: Props) => {
-  const note: NoteType = { title: title, mainText: mainText };
+const Note = ({
+  title,
+  setTitle,
+  mainText,
+  setMainText,
+  dateTime,
+  getDateTime,
+}: Props) => {
+  const note: NoteType = {
+    title: title,
+    mainText: mainText,
+    dateTime: dateTime,
+  };
 
   useEffect(() => {
     localStorage.setItem("note", JSON.stringify(note));
