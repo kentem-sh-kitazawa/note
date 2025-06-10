@@ -6,6 +6,8 @@ type Props = {
   setTitle: Dispatch<SetStateAction<string>>;
   mainText: string;
   setMainText: Dispatch<SetStateAction<string>>;
+  dateTime?: string;
+  getDateTime: () => void;
 };
 
 const NoteList = ({
@@ -32,6 +34,7 @@ const NoteList = ({
     const note: NoteType = {
       title: title,
       mainText: mainText,
+      dateTime: dateTime,
     };
     const prevNotes = localStorage.getItem("notes");
     const parseNotes = prevNotes ? JSON.parse(prevNotes) : [];
