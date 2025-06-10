@@ -28,6 +28,7 @@ const NoteList = ({
     setPrevNote(parseNotes);
   }, []);
 
+  //ノートを追加する関数
   const addNote = () => {
     getDateTime();
     const note: NoteType = {
