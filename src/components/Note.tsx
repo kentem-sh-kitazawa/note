@@ -26,10 +26,12 @@ const Note = ({
   };
 
   useEffect(() => {
+    getDateTime();
     localStorage.setItem("note", JSON.stringify(note));
   }, [title]);
 
   useEffect(() => {
+    getDateTime();
     localStorage.setItem("note", JSON.stringify(note));
   }, [mainText]);
 
