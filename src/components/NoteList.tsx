@@ -31,6 +31,7 @@ const NoteList = ({
   }, []);
 
   const addNote = () => {
+    getDateTime();
     const note: NoteType = {
       title: title,
       mainText: mainText,
@@ -58,7 +59,7 @@ const NoteList = ({
           削除
         </button>
         <p>{mainText}</p>
-        <p>日時</p>
+        <p>{dateTime}</p>
       </li>
       {prevNote.map((note, index) => (
         <li key={index}>
@@ -76,7 +77,7 @@ const NoteList = ({
             削除
           </button>
           <p>{note.mainText}</p>
-          <p>日時</p>
+          <p>{note.dateTime}</p>
         </li>
       ))}
     </div>
