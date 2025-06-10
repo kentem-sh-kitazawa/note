@@ -1,10 +1,13 @@
-import { useState } from "react";
+import type { Dispatch, SetStateAction } from "react";
 
-const Note = () => {
-  //タイトルを保持するstate
-  const [title, setTitle] = useState<string>("");
-  //本文を保持するstate
-  const [mainText, setMainText] = useState<string>("");
+type Props = {
+  title: string;
+  setTitle: Dispatch<SetStateAction<string>>;
+  mainText: string;
+  setMainText: Dispatch<SetStateAction<string>>;
+};
+
+const Note = ({ title, setTitle, mainText, setMainText }: Props) => {
   return (
     <div>
       <input
