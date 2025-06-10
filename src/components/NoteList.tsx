@@ -1,11 +1,13 @@
+import { type Dispatch, type SetStateAction } from "react";
+
 type Props = {
   title: string;
+  setTitle: Dispatch<SetStateAction<string>>;
   mainText: string;
+  setMainText: Dispatch<SetStateAction<string>>;
 };
 
-const NoteList = ({ title, mainText }: Props) => {
-  //stateが変更されたときにローカルストレージに保存する
-  //ローカルストレージに配列として保存→その配列をmapで展開
+const NoteList = ({ title, setTitle, mainText, setMainText }: Props) => {
   //stateが変更されるとリストの表示も変わる、年月日と時間の表示
   //追加を押したときに新しく作成、stateをリセット
   return (
