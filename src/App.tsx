@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Note from "./components/Note";
 import NoteList from "./components/NoteList";
+import "./style/App.css";
 
 function App() {
   //タイトルを保持するstate
