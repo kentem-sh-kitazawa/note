@@ -29,12 +29,16 @@ function App() {
         setTitle={setTitle}
         mainText={mainText}
         setMainText={setMainText}
+        dateTime={dateTIme}
+        getDateTime={getDateTime}
       />
       <Note
         title={title}
         setTitle={setTitle}
         mainText={mainText}
         setMainText={setMainText}
+        dateTime={dateTIme}
+        getDateTime={getDateTime}
       />
     </div>
   );
