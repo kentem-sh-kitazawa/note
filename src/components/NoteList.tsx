@@ -18,8 +18,6 @@ const NoteList = ({
   dateTime,
   getDateTime,
 }: Props) => {
-  //年月日と時間の表示
-
   //ローカルストレージに保存したノートを保持するステート
   const [prevNote, setPrevNote] = useState<NoteType[]>([]);
 
