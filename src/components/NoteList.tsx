@@ -45,6 +45,13 @@ const NoteList = ({ title, setTitle, mainText, setMainText }: Props) => {
 
       <li>
         <h3>{title}</h3>
+        <button
+          onClick={() => {
+            //保留
+          }}
+        >
+          削除
+        </button>
         <p>{mainText}</p>
         <p>日時</p>
       </li>
