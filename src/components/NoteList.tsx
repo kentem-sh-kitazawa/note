@@ -7,6 +7,11 @@ type Props = {
   setMainText: Dispatch<SetStateAction<string>>;
 };
 
+type NoteType = {
+  title: string;
+  mainText: string;
+};
+
 const NoteList = ({ title, setTitle, mainText, setMainText }: Props) => {
   //年月日と時間の表示
 
@@ -21,7 +26,7 @@ const NoteList = ({ title, setTitle, mainText, setMainText }: Props) => {
   }, []);
 
   const addNote = () => {
-    const note = {
+    const note: NoteType = {
       title: title,
       mainText: mainText,
     };
