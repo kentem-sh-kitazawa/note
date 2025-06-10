@@ -16,6 +16,7 @@ function App() {
         mainText={mainText}
         setMainText={setMainText}
       />
+      <NoteList title={title} mainText={mainText} />
     </>
   );
 }
