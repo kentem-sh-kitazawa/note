@@ -20,3 +20,4 @@ const Note = () => {
     </div>
   );
 };
+export default Note;
