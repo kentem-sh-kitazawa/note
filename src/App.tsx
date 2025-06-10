@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Note from "./components/Note";
+import NoteList from "./components/NoteList";
 
 function App() {
   //タイトルを保持するstate
