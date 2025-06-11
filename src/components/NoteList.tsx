@@ -20,9 +20,6 @@ const NoteList = ({
   dateTime,
   getDateTime,
 }: Props) => {
-  //ローカルストレージに保存したノートを保持するステート
-  const [prevNote, setPrevNote] = useState<NoteType[]>([]);
-
   //画面を表示したときにローカルストレージに保存したノートを描画する処理
   useEffect(() => {
     const prevNotes = localStorage.getItem("notes");
