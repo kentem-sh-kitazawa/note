@@ -54,8 +54,6 @@ const Note = ({
         value={mainText}
         onChange={(mainText) => setMainText(mainText.target.value)}
       ></textarea>
-      <h2>{title}</h2>
-      <p>{mainText}</p>
     </div>
   );
 };

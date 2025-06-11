@@ -28,8 +28,7 @@ const NoteList = ({
   }, []);
 
   return (
-    <div>
-      <button onClick={() => addNote()}>追加</button>
+    <div className="note-list">
       <li>
         <h3>{title}</h3>
         <button
