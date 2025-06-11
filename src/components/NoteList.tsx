@@ -47,6 +47,7 @@ const NoteList = ({
       </li>
       {prevNote.map((note, index) => (
         <li className="note-items" key={index}>
+          <div className="note-heder">
           <h3>{note.title}</h3>
           <button
             onClick={() => {
@@ -60,8 +61,9 @@ const NoteList = ({
           >
             削除
           </button>
+          </div>
           <p>{note.mainText}</p>
-          <p>{note.dateTime}</p>
+          <p className="update-date-time">{note.dateTime}</p>
         </li>
       ))}
     </ul>

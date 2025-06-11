@@ -5,7 +5,7 @@ type Props = {
 
 const NotePreview = ({ title, mainText }: Props) => {
   return (
-    <div>
+    <div className="note-preview">
       <h2>{title}</h2>
       <p>{mainText}</p>
     </div>

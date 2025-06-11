@@ -45,7 +45,7 @@ const Note = ({
   }, [mainText]);
 
   return (
-    <div>
+    <div className="note">
       <input
         value={title}
         onChange={(titleText) => setTitle(titleText.target.value)}
