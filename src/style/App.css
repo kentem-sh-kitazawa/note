@@ -1,3 +1,7 @@
+body {
+  background-color: #e7edf5;
+}
+
 .home-page {
   display: flex;
 }
