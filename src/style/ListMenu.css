@@ -1,0 +1,11 @@
+.list-menu {
+  display: flex;
+}
+
+.list-menu h1 {
+  flex: 70%;
+}
+
+.list-menu button {
+  flex: 20%;
+}
