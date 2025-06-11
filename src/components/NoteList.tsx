@@ -12,19 +12,7 @@ type Props = {
 const NoteList = ({ notes, setNotes }: Props) => {
   return (
     <ul className="note-list">
-      <li className="note-items">
-        <h3>{title}</h3>
-        <button
-          onClick={() => {
-            //保留
-          }}
-        >
-          削除
-        </button>
-        <p>{mainText}</p>
-        <p>{dateTime}</p>
-      </li>
-      {prevNote.map((note, index) => (
+      {notes.map((note, index) => (
         <li className="note-items" key={index}>
           <div className="note-heder">
             <h3>{note.title}</h3>
