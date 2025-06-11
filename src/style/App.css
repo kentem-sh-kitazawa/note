@@ -5,3 +5,11 @@ body {
 .home-page {
   display: flex;
 }
+
+.side-bar {
+  flex: 30%;
+}
+
+.note-editor {
+  flex: 70%;
+}
