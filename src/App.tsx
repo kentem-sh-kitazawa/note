@@ -15,17 +15,8 @@ import type { NoteType } from "./Type/NoteType";
 
 //マークダウン
 function App() {
-  //タイトルを保持するstate
-  const [title, setTitle] = useState<string>("新しいノート");
-  //本文を保持するstate
-  const [mainText, setMainText] = useState<string>("");
-  //現在時刻の取得
-  const [dateTime, setDateTime] = useState<string>("");
   //ノートの管理
-  const [prevNote, setPrevNote] = useState<NoteType[]>(() => {
-    const saved = localStorage.getItem("notes");
-    return saved ? JSON.parse(saved) : [];
-  });
+  const [notes, setNotes] = useState<NoteType[]>([]);
 
   const getDateTime = () => {
     let d = new Date();
