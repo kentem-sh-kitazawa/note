@@ -1,6 +1,7 @@
 import { useEffect, type Dispatch, type SetStateAction } from "react";
 
 import type { NoteType } from "../Type/NoteType";
+
 import "../style/Note.css";
 
 type Props = {
@@ -25,14 +26,6 @@ const Note = ({
     mainText: mainText,
     dateTime: dateTime,
   };
-
-  useEffect(() => {
-    if (localStorage.getItem("note")) {
-      const prevNote = localStorage.getItem("note");
-      const parseNote = prevNote ? JSON.parse(prevNote) : [];
-      console.log(parseNote);
-    }
-  }, []);
 
   useEffect(() => {
     getDateTime();

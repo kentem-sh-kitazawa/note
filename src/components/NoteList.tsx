@@ -1,6 +1,7 @@
 import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
 
 import type { NoteType } from "../Type/NoteType";
+
 import "../style/NoteList.css";
 
 type Props = {
@@ -48,19 +49,19 @@ const NoteList = ({
       {prevNote.map((note, index) => (
         <li className="note-items" key={index}>
           <div className="note-heder">
-          <h3>{note.title}</h3>
-          <button
-            onClick={() => {
-              setPrevNote((prev) => {
-                const prevNotes = [...prev];
-                prevNotes.splice(index, 1);
-                localStorage.setItem("notes", JSON.stringify(prevNotes));
-                return prevNotes;
-              });
-            }}
-          >
-            削除
-          </button>
+            <h3>{note.title}</h3>
+            <button
+              onClick={() => {
+                setPrevNote((prev) => {
+                  const prevNotes = [...prev];
+                  prevNotes.splice(index, 1);
+                  localStorage.setItem("notes", JSON.stringify(prevNotes));
+                  return prevNotes;
+                });
+              }}
+            >
+              削除
+            </button>
           </div>
           <p>{note.mainText}</p>
           <p className="update-date-time">{note.dateTime}</p>
