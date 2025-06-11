@@ -11,6 +11,7 @@
 
 .note-heder {
   display: flex;
+  align-items: center;
 }
 
 .note-heder h3 {
