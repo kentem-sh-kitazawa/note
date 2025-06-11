@@ -73,6 +73,7 @@ function App() {
         dateTime={dateTime}
         getDateTime={getDateTime}
       />
+      <NotePreview title={title} mainText={mainText} />
     </div>
   );
 }
