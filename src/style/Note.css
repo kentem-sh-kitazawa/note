@@ -1,0 +1,16 @@
+.note {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 60vh;
+  padding: 10px;
+}
+
+.note input {
+  height: 50px;
+  font-size: xx-large;
+}
+
+.note textarea {
+  height: 400px;
+}
