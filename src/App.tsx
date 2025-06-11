@@ -36,6 +36,23 @@ function App() {
     setDateTime(year + "/" + month + "/" + day + hour + ":" + minute);
   };
 
+  //ノートを追加する関数
+  const addNote = () => {
+    getDateTime();
+    const note: NoteType = {
+      title: title,
+      mainText: mainText,
+      dateTime: dateTime,
+    };
+    const prevNotes = localStorage.getItem("notes");
+    const parseNotes = prevNotes ? JSON.parse(prevNotes) : [];
+    const updateNotes = [...parseNotes, note];
+    localStorage.setItem("notes", JSON.stringify(updateNotes));
+    setPrevNote(updateNotes);
+    setTitle("新しいノート");
+    setMainText("");
+  };
+
   return (
     <div className="home-page">
       <NoteList
