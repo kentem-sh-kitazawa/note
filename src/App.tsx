@@ -64,6 +64,8 @@ function App() {
         setMainText={setMainText}
         dateTime={dateTime}
         getDateTime={getDateTime}
+        prevNote={prevNote}
+        setPrevNote={setPrevNote}
       />
       <Note
         title={title}
