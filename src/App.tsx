@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import Note from "./components/Note";
 import NoteList from "./components/NoteList";
+import NotePreview from "./components/NotePreview";
+import ListMenu from "./components/ListMenu";
 import "./style/App.css";
 //stateの初期値
 //日時順？
