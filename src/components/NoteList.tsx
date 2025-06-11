@@ -18,12 +18,9 @@ const NoteList = ({ notes, setNotes }: Props) => {
             <h3>{note.title}</h3>
             <button
               onClick={() => {
-                setPrevNote((prev) => {
-                  const prevNotes = [...prev];
-                  prevNotes.splice(index, 1);
-                  localStorage.setItem("notes", JSON.stringify(prevNotes));
-                  return prevNotes;
-                });
+                const newNotes = [...notes];
+                newNotes.splice(index, 1);
+                setNotes(newNotes);
               }}
             >
               削除
