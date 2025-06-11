@@ -5,33 +5,11 @@ import type { NoteType } from "../Type/NoteType";
 import "../style/NoteList.css";
 
 type Props = {
-  title: string;
-  setTitle: Dispatch<SetStateAction<string>>;
-  mainText: string;
-  setMainText: Dispatch<SetStateAction<string>>;
-  dateTime?: string;
-  getDateTime: () => void;
-  prevNote: NoteType[];
-  setPrevNote: Dispatch<SetStateAction<NoteType[]>>;
+  notes: NoteType[];
+  setNotes: Dispatch<SetStateAction<NoteType[]>>;
 };
 
-const NoteList = ({
-  title,
-  setTitle,
-  mainText,
-  setMainText,
-  dateTime,
-  getDateTime,
-  prevNote,
-  setPrevNote,
-}: Props) => {
-  //画面を表示したときにローカルストレージに保存したノートを描画する処理
-  useEffect(() => {
-    const prevNotes = localStorage.getItem("notes");
-    const parseNotes = prevNotes ? JSON.parse(prevNotes) : [];
-    setPrevNote(parseNotes);
-  }, []);
-
+const NoteList = ({ notes, setNotes }: Props) => {
   return (
     <ul className="note-list">
       <li className="note-items">
