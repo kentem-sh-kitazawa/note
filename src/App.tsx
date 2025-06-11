@@ -17,6 +17,8 @@ import type { NoteType } from "./Type/NoteType";
 function App() {
   //ノートの管理
   const [notes, setNotes] = useState<NoteType[]>([]);
+  //選択されているノートのインデックス
+  const selectIndex = useRef(0);
 
   const getDateTime = () => {
     const d = new Date();
