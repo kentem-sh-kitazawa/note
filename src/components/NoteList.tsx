@@ -32,8 +32,8 @@ const NoteList = ({
   }, []);
 
   return (
-    <div className="note-list">
-      <li>
+    <ul className="note-list">
+      <li className="note-items">
         <h3>{title}</h3>
         <button
           onClick={() => {
@@ -46,7 +46,7 @@ const NoteList = ({
         <p>{dateTime}</p>
       </li>
       {prevNote.map((note, index) => (
-        <li key={index}>
+        <li className="note-items" key={index}>
           <h3>{note.title}</h3>
           <button
             onClick={() => {
@@ -64,7 +64,7 @@ const NoteList = ({
           <p>{note.dateTime}</p>
         </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
