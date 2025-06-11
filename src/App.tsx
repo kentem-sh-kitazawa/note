@@ -62,7 +62,7 @@ function App() {
         setTitle={setTitle}
         mainText={mainText}
         setMainText={setMainText}
-        dateTime={dateTIme}
+        dateTime={dateTime}
         getDateTime={getDateTime}
       />
       <Note
@@ -70,7 +70,7 @@ function App() {
         setTitle={setTitle}
         mainText={mainText}
         setMainText={setMainText}
-        dateTime={dateTIme}
+        dateTime={dateTime}
         getDateTime={getDateTime}
       />
     </div>
