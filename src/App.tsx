@@ -56,6 +56,7 @@ function App() {
 
   return (
     <div className="home-page">
+      <ListMenu addNote={addNote} />
       <NoteList
         title={title}
         setTitle={setTitle}
