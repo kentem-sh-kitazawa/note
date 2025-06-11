@@ -19,7 +19,12 @@ function App() {
   //本文を保持するstate
   const [mainText, setMainText] = useState<string>("");
   //現在時刻の取得
-  const [dateTIme, setDateTime] = useState<string>("");
+  const [dateTime, setDateTime] = useState<string>("");
+  //ノートの管理
+  const [prevNote, setPrevNote] = useState<NoteType[]>(() => {
+    const saved = localStorage.getItem("notes");
+    return saved ? JSON.parse(saved) : [];
+  });
 
   const getDateTime = () => {
     let d = new Date();
