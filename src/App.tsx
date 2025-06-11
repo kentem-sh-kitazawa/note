@@ -49,27 +49,11 @@ function App() {
     <div className="home-page">
       <div className="side-bar">
         <ListMenu addNote={addNote} />
-        <NoteList
-          title={title}
-          setTitle={setTitle}
-          mainText={mainText}
-          setMainText={setMainText}
-          dateTime={dateTime}
-          getDateTime={getDateTime}
-          prevNote={prevNote}
-          setPrevNote={setPrevNote}
-        />
+        <NoteList notes={notes} setNotes={setNotes} />
       </div>
       <div className="note-editor">
-        <Note
-          title={title}
-          setTitle={setTitle}
-          mainText={mainText}
-          setMainText={setMainText}
-          dateTime={dateTime}
-          getDateTime={getDateTime}
-        />
-        <NotePreview title={title} mainText={mainText} />
+        <Note notes={notes} setNotes={setNotes} />
+        {/* <NotePreview title={title} mainText={mainText} />  */}
       </div>
     </div>
   );
