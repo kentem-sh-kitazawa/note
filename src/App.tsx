@@ -5,6 +5,7 @@ import NoteList from "./components/NoteList";
 import NotePreview from "./components/NotePreview";
 import ListMenu from "./components/ListMenu";
 import "./style/App.css";
+import type { NoteType } from "./Type/NoteType";
 //stateの初期値
 //日時順？
 //編集機能
