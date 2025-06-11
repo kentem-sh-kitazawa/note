@@ -32,19 +32,13 @@ function App() {
 
   //ノートを追加する関数
   const addNote = () => {
-    getDateTime();
-    const note: NoteType = {
-      title: title,
-      mainText: mainText,
-      dateTime: dateTime,
+    const newNote = {
+      title: "新しいノート",
+      mainText: "",
+      dateTime: getDateTime(),
     };
-    const prevNotes = localStorage.getItem("notes");
-    const parseNotes = prevNotes ? JSON.parse(prevNotes) : [];
-    const updateNotes = [...parseNotes, note];
-    localStorage.setItem("notes", JSON.stringify(updateNotes));
-    setPrevNote(updateNotes);
-    setTitle("新しいノート");
-    setMainText("");
+    const newNotes = [newNote, ...notes];
+    setNotes(newNotes);
   };
 
   return (
