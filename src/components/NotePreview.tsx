@@ -1,3 +1,4 @@
+import "../style/NotePreview.css";
 type Props = {
   title: string;
   mainText: string;

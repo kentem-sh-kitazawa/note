@@ -1,0 +1,5 @@
+.note-preview {
+  background-color: rgb(213, 231, 235);
+  overflow-y: scroll;
+  height: 40vh;
+}
