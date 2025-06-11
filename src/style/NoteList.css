@@ -1,0 +1,22 @@
+.note-list {
+  height: 100%;
+  overflow-y: scroll;
+  padding-left: 0;
+}
+
+.note-items {
+  list-style: none;
+  padding: 0;
+}
+
+.note-heder {
+  display: flex;
+}
+
+.note-heder h3 {
+  flex: 80%;
+}
+
+.note-hederbutton {
+  flex: 20%;
+}
