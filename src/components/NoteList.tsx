@@ -10,6 +10,8 @@ type Props = {
   setMainText: Dispatch<SetStateAction<string>>;
   dateTime?: string;
   getDateTime: () => void;
+  prevNote: NoteType;
+  setPrevNote: Dispatch<SetStateAction<NoteType[]>>;
 };
 
 const NoteList = ({
@@ -19,6 +21,8 @@ const NoteList = ({
   setMainText,
   dateTime,
   getDateTime,
+  prevNote,
+  setPrevNote,
 }: Props) => {
   //画面を表示したときにローカルストレージに保存したノートを描画する処理
   useEffect(() => {
