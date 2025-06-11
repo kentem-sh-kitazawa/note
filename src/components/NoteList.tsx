@@ -10,7 +10,7 @@ type Props = {
   setMainText: Dispatch<SetStateAction<string>>;
   dateTime?: string;
   getDateTime: () => void;
-  prevNote: NoteType;
+  prevNote: NoteType[];
   setPrevNote: Dispatch<SetStateAction<NoteType[]>>;
 };
 
