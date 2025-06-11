@@ -1,24 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Note from "./components/Note";
 import NoteList from "./components/NoteList";
-import NotePreview from "./components/NotePreview";
 import ListMenu from "./components/ListMenu";
-import "./style/App.css";
 import type { NoteType } from "./Type/NoteType";
+import NotePreview from "./components/NotePreview";
+
+import "./style/App.css";
 //stateの初期値
 //日時順？
 //編集機能
-
-//スタイル
-//↑スクロールバー
 
 //マークダウン
 function App() {
   //ノートの管理
   const [notes, setNotes] = useState<NoteType[]>([]);
-  //選択されているノートのインデックス
-  const selectIndex = useRef(0);
+  const [selectedId, setSelectedId] = useState<string>("");
+  const [title, setTitle] = useState<string>("");
+  const [mainText, setMainText] = useState<string>("");
 
   const getDateTime = () => {
     const d = new Date();
@@ -33,23 +32,42 @@ function App() {
   //ノートを追加する関数
   const addNote = () => {
     const newNote = {
+      id: new Date().toISOString(),
       title: "新しいノート",
       mainText: "",
       dateTime: getDateTime(),
     };
-    const newNotes = [newNote, ...notes];
-    setNotes(newNotes);
+    setNotes((prev) => [newNote, ...prev]);
   };
+  useEffect(() => {
+    const selectedNote = notes.find((note) => {
+      return note.id === selectedId;
+    });
+    setTitle(selectedNote?.title ?? "");
+    setMainText(selectedNote?.mainText ?? "");
+  }, [notes, selectedId]);
 
   return (
     <div className="home-page">
       <div className="side-bar">
         <ListMenu addNote={addNote} />
-        <NoteList notes={notes} setNotes={setNotes} />
+        <NoteList
+          notes={notes}
+          setNotes={setNotes}
+          setSelectedId={setSelectedId}
+        />
       </div>
       <div className="note-editor">
-        <Note notes={notes} setNotes={setNotes} />
-        {/* <NotePreview title={title} mainText={mainText} />  */}
+        <Note
+          notes={notes}
+          setNotes={setNotes}
+          title={title}
+          setTitle={setTitle}
+          mainText={mainText}
+          setMainText={setMainText}
+          selectedId={selectedId}
+        />
+        <NotePreview title={title} mainText={mainText} />
       </div>
     </div>
   );
