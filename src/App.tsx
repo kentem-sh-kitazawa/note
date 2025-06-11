@@ -19,13 +19,13 @@ function App() {
   const [notes, setNotes] = useState<NoteType[]>([]);
 
   const getDateTime = () => {
-    let d = new Date();
-    let year = d.getFullYear();
-    let month = d.getMonth();
-    let day = d.getDate();
-    let hour = d.getHours().toString().padStart(2, "0");
-    let minute = d.getMinutes().toString().padStart(2, "0");
-    setDateTime(year + "/" + month + "/" + day + hour + ":" + minute);
+    const d = new Date();
+    const year = d.getFullYear();
+    const month = d.getMonth();
+    const day = d.getDate();
+    const hour = d.getHours().toString().padStart(2, "0");
+    const minute = d.getMinutes().toString().padStart(2, "0");
+    return year + "/" + month + "/" + day + hour + ":" + minute;
   };
 
   //ノートを追加する関数
