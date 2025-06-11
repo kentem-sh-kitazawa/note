@@ -9,3 +9,7 @@
 .list-menu button {
   flex: 20%;
 }
+
+.update-date-time {
+  color: rgb(173, 173, 173);
+}
