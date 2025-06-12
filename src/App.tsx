@@ -52,6 +52,15 @@ function App() {
     localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
 
+  useEffect(() => {
+    const hasTargetId = notes
+      .map((note) => note.id)
+      .find((id) => selectedId !== "" && id === selectedId);
+    if (!hasTargetId) {
+      setSelectedId("");
+    }
+  }, [notes, selectedId]);
+
   return (
     <div className="home-page">
       <div className="side-bar">
