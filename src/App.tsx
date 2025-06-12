@@ -47,8 +47,6 @@ function App() {
     setMainText(selectedNote?.mainText ?? "");
   }, [notes, selectedId]);
 
-  useEffect(() => {}, []);
-
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
