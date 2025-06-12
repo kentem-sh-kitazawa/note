@@ -30,7 +30,7 @@ function App() {
 
   //ノートを追加する関数
   const addNote = () => {
-    const newNote = {
+    const newNote: NoteType = {
       id: new Date().toISOString(),
       title: "新しいノート",
       mainText: "",
