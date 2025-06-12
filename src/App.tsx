@@ -37,6 +37,7 @@ function App() {
       dateTime: getDateTime(),
     };
     setNotes((prev) => [newNote, ...prev]);
+    setSelectedId(notes[0].id);
   };
 
   useEffect(() => {
