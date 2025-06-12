@@ -7,14 +7,13 @@ import type { NoteType } from "./Type/NoteType";
 import NotePreview from "./components/NotePreview";
 
 import "./style/App.css";
-//stateの初期値
-//日時順？
-//編集機能
-
 //マークダウン
 function App() {
   //ノートの管理
-  const [notes, setNotes] = useState<NoteType[]>([]);
+  const [notes, setNotes] = useState<NoteType[]>(() => {
+    const saved = localStorage.getItem("notes");
+    return saved ? JSON.parse(saved) : [];
+  });
   const [selectedId, setSelectedId] = useState<string>("");
   const [title, setTitle] = useState<string>("");
   const [mainText, setMainText] = useState<string>("");
@@ -39,6 +38,7 @@ function App() {
     };
     setNotes((prev) => [newNote, ...prev]);
   };
+
   useEffect(() => {
     const selectedNote = notes.find((note) => {
       return note.id === selectedId;
@@ -46,6 +46,12 @@ function App() {
     setTitle(selectedNote?.title ?? "");
     setMainText(selectedNote?.mainText ?? "");
   }, [notes, selectedId]);
+
+  useEffect(() => {}, []);
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   return (
     <div className="home-page">
