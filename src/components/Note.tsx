@@ -24,32 +24,38 @@ const Note = ({
   selectedId,
 }: Props) => {
   return (
-    <div className="note">
-      <input
-        value={title}
-        onChange={(titleText) => {
-          setTitle(titleText.target.value);
-          const newNotes = notes.map((note) => {
-            return note.id === selectedId
-              ? { ...note, title: titleText.target.value }
-              : note;
-          });
-          setNotes(newNotes);
-        }}
-      />
-      <textarea
-        value={mainText}
-        onChange={(mainText) => {
-          setMainText(mainText.target.value);
-          const newNotes = notes.map((note) => {
-            return note.id === selectedId
-              ? { ...note, mainText: mainText.target.value }
-              : note;
-          });
-          setNotes(newNotes);
-        }}
-      ></textarea>
-    </div>
+    <>
+      {selectedId ? (
+        <div className="note">
+          <input
+            value={title}
+            onChange={(titleText) => {
+              setTitle(titleText.target.value);
+              const newNotes = notes.map((note) => {
+                return note.id === selectedId
+                  ? { ...note, title: titleText.target.value }
+                  : note;
+              });
+              setNotes(newNotes);
+            }}
+          />
+          <textarea
+            value={mainText}
+            onChange={(mainText) => {
+              setMainText(mainText.target.value);
+              const newNotes = notes.map((note) => {
+                return note.id === selectedId
+                  ? { ...note, mainText: mainText.target.value }
+                  : note;
+              });
+              setNotes(newNotes);
+            }}
+          ></textarea>
+        </div>
+      ) : (
+        <p>ノートが選択されていません</p>
+      )}
+    </>
   );
 };
 export default Note;
