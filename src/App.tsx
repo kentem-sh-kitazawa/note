@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 import Note from "./components/Note";
 import NoteList from "./components/NoteList";
-import ListMenu from "./components/ListMenu";
-import type { NoteType } from "./Type/NoteType";
+import NoteListMenu from "./components/NoteListMenu";
 import NotePreview from "./components/NotePreview";
+import type { NoteType } from "./Type/NoteType";
 
 import "./style/App.css";
 //マークダウン
@@ -56,7 +56,7 @@ function App() {
   return (
     <div className="home-page">
       <div className="side-bar">
-        <ListMenu addNote={addNote} />
+        <NoteListMenu addNote={addNote} />
         <NoteList
           notes={notes}
           setNotes={setNotes}

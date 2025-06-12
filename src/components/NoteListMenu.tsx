@@ -4,7 +4,7 @@ type Props = {
   addNote: () => void;
 };
 
-const ListMenu = ({ addNote }: Props) => {
+const NoteListMenu = ({ addNote }: Props) => {
   return (
     <div className="list-menu">
       <h1>ノート</h1>
@@ -12,4 +12,4 @@ const ListMenu = ({ addNote }: Props) => {
     </div>
   );
 };
-export default ListMenu;
+export default NoteListMenu;
