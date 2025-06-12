@@ -17,6 +17,7 @@ const NoteList = ({ notes, selectedId, setNotes, setSelectedId }: Props) => {
       return note.id !== newNote.id;
     });
     setNotes(newNotes);
+    setSelectedId("");
   };
   return (
     <ul className="note-list">
@@ -30,7 +31,7 @@ const NoteList = ({ notes, selectedId, setNotes, setSelectedId }: Props) => {
         >
           <div className="note-heder">
             <h3>{note.title}</h3>
-            <button onClick={() => tmp(note)}>削除</button>
+            <button onClick={() => handleDeleteNote(note)}>削除</button>
           </div>
           <p>{note.mainText}</p>
           <p className="update-date-time">{note.dateTime}</p>
