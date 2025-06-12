@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 10px;
   height: 60vh;
-  padding: 10px;
+  padding: 5px;
 }
 
 .note input {
@@ -13,4 +13,9 @@
 
 .note textarea {
   height: 400px;
+}
+
+.note p {
+  margin: auto;
+  color: rgb(173, 173, 173);
 }

@@ -53,7 +53,9 @@ const Note = ({
           ></textarea>
         </div>
       ) : (
-        <p>ノートが選択されていません</p>
+        <div className="note">
+          <p>ノートが選択されていません</p>
+        </div>
       )}
     </>
   );
