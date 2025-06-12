@@ -1,4 +1,4 @@
-import "../style/ListMenu.css";
+import "../style/NoteListMenu.css";
 
 type Props = {
   addNote: () => void;
