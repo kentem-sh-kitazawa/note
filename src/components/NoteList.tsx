@@ -6,6 +6,7 @@ import "../style/NoteList.css";
 
 type Props = {
   notes: NoteType[];
+  selectedId: string;
   setNotes: Dispatch<SetStateAction<NoteType[]>>;
   setSelectedId: Dispatch<SetStateAction<string>>;
 };
