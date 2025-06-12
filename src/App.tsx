@@ -58,6 +58,7 @@ function App() {
         <NoteListMenu addNote={addNote} />
         <NoteList
           notes={notes}
+          selectedId={selectedId}
           setNotes={setNotes}
           setSelectedId={setSelectedId}
         />

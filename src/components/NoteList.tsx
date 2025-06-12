@@ -10,8 +10,8 @@ type Props = {
   setSelectedId: Dispatch<SetStateAction<string>>;
 };
 
-const NoteList = ({ notes, setNotes, setSelectedId }: Props) => {
-  const tmp = (note: NoteType) => {
+const NoteList = ({ notes, selectedId, setNotes, setSelectedId }: Props) => {
+  const handleDeleteNote = (note: NoteType) => {
     const newNotes = notes.filter((newNote) => {
       return note.id !== newNote.id;
     });
