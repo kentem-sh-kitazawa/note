@@ -21,3 +21,7 @@
 .note-hederbutton {
   flex: 20%;
 }
+
+.selectedNote {
+  background: gray;
+}

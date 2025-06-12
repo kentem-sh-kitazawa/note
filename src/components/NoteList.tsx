@@ -23,7 +23,7 @@ const NoteList = ({ notes, selectedId, setNotes, setSelectedId }: Props) => {
     <ul className="note-list">
       {notes.map((note) => (
         <li
-          className="note-items"
+          className={`note-items ${selectedId === note.id && "selectedNote"}`}
           key={note.id}
           onClick={() => {
             setSelectedId(note.id);
