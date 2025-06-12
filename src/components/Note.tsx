@@ -25,7 +25,7 @@ const Note = ({
 }: Props) => {
   return (
     <>
-      {selectedId ? (
+      {selectedId !== "" ? (
         <div className="note">
           <input
             value={title}
