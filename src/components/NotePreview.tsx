@@ -1,9 +1,9 @@
 import "../style/NotePreview.css";
+
 type Props = {
   title: string;
   mainText: string;
 };
-
 const NotePreview = ({ title, mainText }: Props) => {
   return (
     <div className="note-preview">

@@ -8,24 +8,24 @@ type Props = {
   notes: NoteType[];
   title: string;
   mainText: string;
+  selectedId: string;
   setNotes: Dispatch<SetStateAction<NoteType[]>>;
   setTitle: Dispatch<SetStateAction<string>>;
   setMainText: Dispatch<SetStateAction<string>>;
-  selectedId: string;
 };
 
 const Note = ({
   notes,
   title,
   mainText,
+  selectedId,
   setNotes,
   setTitle,
   setMainText,
-  selectedId,
 }: Props) => {
   return (
     <>
-      {selectedId ? (
+      {selectedId !== "" ? (
         <div className="note">
           <input
             value={title}

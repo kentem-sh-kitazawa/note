@@ -3,7 +3,6 @@ import "../style/NoteListMenu.css";
 type Props = {
   addNote: () => void;
 };
-
 const NoteListMenu = ({ addNote }: Props) => {
   return (
     <div className="list-menu">
