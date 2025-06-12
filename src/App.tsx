@@ -7,7 +7,6 @@ import NotePreview from "./components/NotePreview";
 import type { NoteType } from "./Type/NoteType";
 
 import "./style/App.css";
-//マークダウン
 function App() {
   //ノートの管理
   const [notes, setNotes] = useState<NoteType[]>(() => {
